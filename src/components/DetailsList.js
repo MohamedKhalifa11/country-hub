@@ -91,10 +91,12 @@ const DetailsList = () => {
                   <span>Currencies: </span>
                   {countryDetails.currencies &&
                     Object.values(countryDetails.currencies)
+                      .filter(
+                        (currency) => currency.name !== "Israeli new shekel"
+                      )
                       .map((currency) => currency.name)
                       .join(", ")}
                 </div>
-
                 <div>
                   <span>Languages: </span>
                   {countryDetails.languages &&
