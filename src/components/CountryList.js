@@ -35,12 +35,16 @@ const CountryList = ({ searchCountry, selectedRegion }) => {
   };
 
   // Filtering countries based on searchCountry
-  const FilterCountry = countries.filter(
-    (country) =>
-      country.name.common.toLowerCase().includes(searchCountry.toLowerCase()) &&
-      (selectedRegion === "" || country.region === selectedRegion) &&
-      country.name.common !== "Israel"
-  );
+  const FilterCountry = countries
+    .filter(
+      (country) =>
+        country.name.common
+          .toLowerCase()
+          .includes(searchCountry.toLowerCase()) &&
+        (selectedRegion === "" || country.region === selectedRegion) &&
+        country.name.common !== "Israel"
+    )
+    .sort((a, b) => a.name.common.localeCompare(b.name.common));
 
   // Function to handle card click and navigate to the country details page
   const handleCardClick = (countryCode) => {
