@@ -23,6 +23,7 @@ Country Hub app allows users to find the country on the home page and the app ha
 - React Router DOM
 - Local Storage
 - Lazy Loading
+- Bootstrap
 - [Rest Countries Api](https://restcountries.com/)
 
 ## Usage
