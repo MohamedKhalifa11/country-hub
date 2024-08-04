@@ -51,12 +51,13 @@ const CountryList = ({ searchCountry, selectedRegion }) => {
     navigate(`/details/${countryCode}`);
   };
 
+  console.log(FilterCountry.length);
+
   return (
     <div className="d-flex flex-wrap flex-start gap-5 my-5">
       {loading ? (
         <div className="loading-container d-flex justify-content-center m-auto">
           <img className="loading-img" src={spinner} alt="Loading..." />
-          {console.log(FilterCountry.length)}
         </div>
       ) : FilterCountry.length > 0 ? (
         FilterCountry.map((country) => (
