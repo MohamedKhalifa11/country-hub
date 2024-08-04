@@ -72,6 +72,9 @@
   color: var(--dark-mode-text);
 }
 
+#dark .noCountryFound {
+  color: var(--dark-mode-text);
+}
 
 
 /* Responsive Design */
